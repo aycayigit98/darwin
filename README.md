@@ -1,18 +1,36 @@
-# darwin
-Early Detection of Alzheimer’s Using Handwriting Data 
+ Alzheimer’s Detection Using Handwriting Data (DARWIN Dataset)
+This project presents a machine learning approach for the early detection of Alzheimer’s disease using handwriting data from the [DARWIN dataset (Diagnosis AlzheimeR WIth haNdwriting)].
 
-This work presents a machine learning approach to detect Alzheimer’s Disease using the DARWIN dataset, which includes handwriting data from 174 individuals (89 with Alzheimer’s, 85 healthy).
+The dataset contains handwriting signals from 174 individuals (89 Alzheimer’s patients, 85 healthy), recorded across 25 writing tasks. After feature extraction and preprocessing, a stacked ensemble classifier was trained using:
 
-Goal: Build a non-invasive, low-cost classification model based on handwriting features.
+  -Gradient Boosting
 
-Steps: Feature extraction → SMOTE balancing → RFE & drop-column selection → Ensemble model (Gradient Boosting, Random Forest, Logistic Regression) → Threshold optimization
+  -Random Forest
 
-Evaluation: Confusion matrix, ROC & precision-recall curves
+  -Logistic Regression
 
-✅ Results
+📌 Key Steps
+Feature engineering from time-series signals (mean, std, variance)
+
+Feature selection using RFE and Drop Column
+
+Class balancing with SMOTE
+
+Ensemble classification & threshold optimization
+
+Evaluation with confusion matrix, ROC, and Precision-Recall curves
+
+📊 Results
 Accuracy: 94%
-F1 Score: 0.95
-Cross-validation Accuracy: ~76%
 
-Handwriting-based models like this could support early Alzheimer’s diagnosis in accessible ways.
+F1 Score: 0.95
+
+Recall (Patients): 1.00
+
+Cross-validation Avg Accuracy: 76%
+
+📁 Files
+darwin.py: Main code with preprocessing, model training, and evaluation.
+
+README.md: Project summary.
 
